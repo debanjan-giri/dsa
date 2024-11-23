@@ -1,5 +1,4 @@
-
-// interface:
+// interface
 // interface is a way to achieve abstraction in java
 // similar to a class but only contains abstract methods,
 // also support body for default methods, static methods,
@@ -9,38 +8,34 @@
 // define interface normal method by using default key
 // define public during interface method implementation
 
+// constractor
 // interface doesnot support constractor
+//similar to abstract class , inheritance help to create obj
 
-interface box27 {
-    int data = 78;
+interface Interface {
+    int data = 10;
 
     void method();
 
-    void method2();
-
-    default void method3() {
-        System.out.println("hello");
+    default void method2() {
+        System.out.println(data);
     }
 }
 
-// interface similar to abstract class so it cant create obj
-class box28 implements box27 {
-
+class ChildInterface implements Interface {
     @Override
     public void method() {
         System.out.println(data);
     }
 
-    @Override
-    public void method2() {
-        System.out.println(data);
-    }
+    // @Override
+    // public void method2() {
+    // System.out.println(data);
+    // }
 
     public static void main(String[] args) {
-
-        box27 obj = new box28();
-        obj.method(); // abstract method
-        obj.method2(); // abstract method
-        obj.method3(); // normal method
+        ChildInterface obj = new ChildInterface();
+        obj.method(); // 10
+        obj.method2(); // 10
     }
 }

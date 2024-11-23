@@ -1,5 +1,4 @@
-
-// encapsulation
+// Encapsulation
 
 // Data Hiding: 
 // Encapsulation hide internal state of an obj from external
@@ -12,19 +11,14 @@
 // Modularity: 
 // encapsulating related data and behavior into single unit
 
-class Person {
-    // Private data members (encapsulated)
-    private String name;
+public class Encapsulation {
+    private int data = 10; // private data
 
-    // Public methods to access and modify the private data
-
-    // (getters)
-    public String getName() {
-        return name;
+    public int getData() { // getter
+        return data;
     }
 
-    // (setters)
-    public void setName(String name) {
-        this.name = name;
+    public void setData(int data) { // setter
+        this.data = data;
     }
 }
